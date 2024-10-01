@@ -1,0 +1,41 @@
+@use "../globals" as *;
+@use "../utilities/mixins.scss" as *;
+header {
+  padding: 3rem 4.2rem 2.5rem;
+  border-bottom: .3rem solid #9A9A9A17;
+  @include flex(row, space-between, center, 0);
+  .logo {
+    color: $black;
+    @include text-font($font-Jua, $font-size-lg, $font-regular, $line-height-5);
+  }
+  .header__actions {
+    @include flex(row, center, center, 2.1rem);
+    .fiter-btn {
+      width: 4rem;
+      height: 4rem;
+      @include flex(row, center, center, 0);
+      background-color: $light-gray-1;
+      border: 0;
+      border-radius: .5rem;
+      box-shadow: .2rem .2rem .2rem 0 #00000021;
+      cursor: pointer;
+      transition: .5s all;
+        &:hover{
+            background-color: rgba($gray-1, $alpha: .3);
+        }
+    }
+    .add-btn {
+      width: 14rem;
+      height: 4rem;
+      @include flex(row, center, center, .6rem);
+      border: 0;
+      background-color: $green-2;
+      border-radius: .5rem;
+      cursor: pointer;
+      transition: .5s all;
+      &:hover{
+          background-color: rgba($green-2, $alpha: .8);
+      }
+    }
+  }
+}

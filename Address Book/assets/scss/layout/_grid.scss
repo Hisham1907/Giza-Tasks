@@ -1,0 +1,21 @@
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 13.8rem auto ;
+    height: 100vh;
+
+    header{
+        grid-column: span 2;
+     }
+    .profile-sidebar{
+        grid-column: 1;
+    }
+    main{
+        grid-column: 2;
+        overflow: auto;
+    }
+    .contact-sidebar{
+        grid-column: 3;
+    }
+ }

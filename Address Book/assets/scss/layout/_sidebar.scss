@@ -1,0 +1,131 @@
+@use "../globals" as *;
+@use "../utilities/mixins.scss" as *;
+
+.profile-sidebar {
+  padding: 1.9rem 2.6rem;
+  border-right: 0.3rem solid #9a9a9a17;
+  .user-name {
+    @include text-font($font-Jua, $font-size-xl, $font-regular, $line-height-6);
+  }
+  .profile-info {
+    .user-details {
+      text-align: center;
+      padding: 2.4rem 0;
+      margin-bottom: 4rem;
+      .user__image {
+        width: 9rem;
+        height: 9rem;
+        margin-bottom: 0.8rem;
+      }
+      .user__name {
+        @include text-font(
+          $font-Jua,
+          $font-size-lg,
+          $font-regular,
+          $line-height-5
+        );
+      }
+      .user__email {
+        color: $gray-1;
+        @include text-font(
+          $font-Inter,
+          $font-size-md,
+          $font-md,
+          $line-height-2
+        );
+      }
+    }
+    .user-contact {
+      color: $gray-1;
+      @include flex(column, start, start, 1.2rem);
+      span {
+        font-size: $font-size-sm;
+      }
+    }
+    .user-contact li {
+      @include flex(row, start, center, 0.8rem);
+    }
+  }
+}
+.contact-sidebar {
+  padding-inline: 2.4rem;
+  .contact-details {
+    .contact-summary {
+      text-align: center;
+      padding: 2.4rem 0;
+      margin-bottom: 4rem;
+
+      .contact-image {
+        width: 11.226rem;
+        height: 9rem;
+      }
+      .contact-name {
+        @include text-font(
+          $font-Jua,
+          $font-size-md,
+          $font-regular,
+          $line-height-3
+        );
+      }
+      .contact-title {
+        color: $gray-1;
+        @include text-font(
+          $font-Inter,
+          $font-size-sm,
+          $font-md,
+          $line-height-1
+        );
+      }
+    }
+    .contact-navigation {
+      background-color: $light-gray-2;
+      border-radius: 1rem;
+      overflow: hidden;
+      display: grid;
+      height: 3rem;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 3.5rem;
+      li {
+        @include flex(row, center, center, 0);
+        a {
+          color: $gray-4;
+          font-size: $font-size-sm;
+        }
+      }
+      .active {
+        background-color: $green-3;
+        a {
+          color: $green-1;
+        }
+      }
+    }
+    .contact-info {
+      @include flex(column, start, stretch, 2.2rem);
+      .card {
+        @include flex(row, space-between, start, 0);
+        a.contact-action {
+          display: inline-block;
+        }
+        .contact-text {
+          %contact-text-styles {
+            @include text-font(
+              $font-Inter,
+              $font-size-sm,
+              $font-md,
+              $line-height-1
+            );
+          }
+          p {
+            color: $gray-1;
+            margin-bottom: 0.2rem;
+            @extend %contact-text-styles;
+          }
+          a {
+            @extend %contact-text-styles;
+            color: $black;
+          }
+        }
+      }
+    }
+  }
+}
