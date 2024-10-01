@@ -1,0 +1,67 @@
+@use "../globals" as *;
+@use "../utilities/mixins.scss" as *;
+main {
+  padding: 1.2rem 2.4rem;
+  table {
+    width: 100%;
+    tbody {
+      tr {
+        padding: .8rem 2rem .8rem 1rem;
+        border: 0.5px solid #8989896e;
+        border-radius: 1rem;
+        margin-bottom: 2.2rem;
+        cursor: pointer;
+        transition: .5s all;
+        &:hover{
+            background-color: $light-gray-2;
+        }
+
+        @include flex(row, space-between, center, 1.5rem);
+        img {
+          width: 7rem;
+          height: 7.714rem;
+        }
+        .contact-info{
+            .contact-name{
+                @include text-font(
+                    $font-Inter,
+                    $font-size-mdx,
+                    $font-lg,
+                    $line-height-4
+                  );
+                  color: $black;
+                  margin-bottom: 1rem;
+            }
+            .contact-title{
+                color: $gray-1;
+                @include text-font(
+                  $font-Inter,
+                  $font-size-sm,
+                  $font-md,
+                  $line-height-1
+                );
+            }
+        }
+        .contact-number{
+            color: $black;
+            @include text-font(
+              $font-Inter,
+              $font-size-md,
+              $font-md,
+              $line-height-2
+            );
+        }
+        .contact-email{
+            color: $gray-1;
+            @include text-font(
+              $font-Inter,
+              $font-size-md,
+              $font-lg,
+              $line-height-2
+            );
+        }
+      
+    }
+    }
+  }
+}
