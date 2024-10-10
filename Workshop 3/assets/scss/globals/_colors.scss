@@ -1,0 +1,89 @@
+// Colors
+
+$black: #000000;
+
+$light-gray-1: #e9e9e9;
+$light-gray-2: #eeeeee;
+
+// text
+$blue: #08a0f7;
+$deep-black: #121212;
+$gray-1: #717171;
+$gray-2: #a0a3ae;
+$date: #888;
+$white: #ffffff;
+$purple: #5F6DDD;
+$purple-2: #7784EE;
+$gray-3: #7f7f7f;
+$green: #46bd84;
+
+// bg
+$light-sky-blue: #f0f5fc;
+$bg-gray: #f4f7fc;
+$main-bg: #EAEEF6;
+$light-green: #ebf7f1;
+$light-blue: #E7F6FF;
+$pink: #D459E8;
+$light-pink: #f6e9f8;
+$light-purple: #D2D7FF;
+
+.text-white {
+  color: $white;
+}
+.text-purple {
+  color: $purple;
+}
+.text-purple-2 {
+  color: $purple-2;
+}
+.text-blue {
+  color: $blue;
+}
+.text-gray-1 {
+  color: $gray-1;
+}
+.text-gray-2 {
+  color: $gray-2;
+}
+.text-gray-3 {
+  color: $gray-3;
+}
+.text-green {
+  color: $green;
+}
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-main {
+  background-color: $main-bg;
+}
+.bg-gray {
+  background-color: $bg-gray;
+}
+.bg-white {
+  background-color: $white;
+}
+.bg-green {
+  background-color: $green;
+}
+.bg-light-green {
+  background-color: $light-green;
+}
+.bg-blue {
+  background-color: $blue;
+}
+.bg-light-blue {
+  background-color: $light-blue;
+}
+.bg-pink {
+  background-color: $pink;
+}
+.bg-light-pink {
+  background-color: $light-pink;
+}
+.bg-purple {
+  background-color: $purple-2;
+}
+.bg-light-purple {
+  background-color: $light-purple;
+}

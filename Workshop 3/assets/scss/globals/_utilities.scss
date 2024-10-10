@@ -1,0 +1,163 @@
+@use "variables" as *;
+
+.d-none {
+  display: none;
+}
+.d-flex {
+  display: flex;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.align-self-start {
+  align-self: start;
+}
+.align-self-end {
+  align-self: end;
+}
+.align-center {
+  align-items: center;
+}
+.align-start {
+  align-items: start;
+}
+.m-auto {
+  margin: 0 auto;
+}
+.w-100 {
+  width: 100%;
+}
+.shadow {
+  box-shadow: $base-box-shadow;
+}
+.shadow-2 {
+  box-shadow: 0px 5px 15px 0px #7784ee4d;
+}
+.position-relative {
+  position: relative;
+}
+.position-absolute {
+  position: absolute;
+}
+//Paddings
+$paddings: (
+  "p-1": $spacing-xs,
+  "p-2": $spacing-sm,
+  "p-3": $spacing-md,
+  "p-4": $spacing-lg,
+  "p-5": $spacing-xl,
+  "p-6": $spacing-2xl,
+  "p-7": $spacing-3xl,
+  "p-8": $spacing-4xl,
+);
+@each $p, $value in $paddings {
+  .#{$p} {
+    padding: $value;
+  }
+}
+@each $p, $value in $paddings {
+  .#{$p}-r {
+    padding-right: $value;
+  }
+}
+@each $p, $value in $paddings {
+  .#{$p}-l {
+    padding-left: $value;
+  }
+}
+@each $p, $value in $paddings {
+  .#{$p}-t {
+    padding-top: $value;
+  }
+}
+
+@each $p, $value in $paddings {
+  .#{$p}-x {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}
+@each $p, $value in $paddings {
+  .#{$p}-y {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+}
+.p-0 {
+  padding: 0;
+}
+.p-0-l {
+  padding-left: 0;
+}
+.p-0-r {
+  padding-right: 0;
+}
+.p-0-t {
+  padding-top: 0;
+}
+.p-0-b {
+  padding-bottom: 0;
+}
+.border-purple {
+  border: 1px solid #7784ee;
+}
+.border-none {
+  border: 0;
+}
+.border-bottom {
+  border-bottom: 1px solid #ececec;
+}
+.resize-none {
+  resize: none;
+}
+// Margins
+$margins: (
+  "m-1": $spacing-xs,
+  "m-2": $spacing-sm,
+  "m-3": $spacing-md,
+  "m-4": $spacing-lg,
+  "m-5": $spacing-xl,
+  "m-6": $spacing-2xl,
+  "m-7": $spacing-3xl,
+  "m-8": $spacing-4xl,
+);
+@each $m, $value in $margins {
+  .#{$m}-r {
+    margin-right: $value;
+  }
+}
+@each $m, $value in $margins {
+  .#{$m}-l {
+    margin-left: $value;
+  }
+}
+
+@each $m, $value in $margins {
+  .#{$m}-b {
+    margin-bottom: $value;
+  }
+}
+
+// Border Radius
+.rounded-1 {
+  border-radius: $border-radius-sm;
+}
+.rounded-2 {
+  border-radius: $border-radius-md;
+}
+.rounded-full {
+  border-radius: $border-radius-lg;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

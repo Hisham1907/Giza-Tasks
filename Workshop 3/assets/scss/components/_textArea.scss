@@ -1,0 +1,11 @@
+@use "../globals/variables" as *;
+
+textarea {
+    height: 150px;
+    &::placeholder {
+      font-size: $font-size-md;
+      font-weight: $font-md;
+      line-height: $line-height-5;
+      letter-spacing: 0.3px;
+    }
+  }

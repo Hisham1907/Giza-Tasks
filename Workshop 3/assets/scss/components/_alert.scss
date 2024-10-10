@@ -1,0 +1,68 @@
+@use "../globals/variables" as *;
+@use "../globals/colors" as *;
+@use "../globals/typography" as *;
+
+.alert {
+  padding: $spacing-md $spacing-xl;
+  display: flex;
+  gap: $spacing-xl;
+  border: 0.5px solid;
+  border-radius: $border-radius-md;
+  h5 {
+    font-size: $font-size-md;
+    font-weight: $font-xl;
+    line-height: $line-height-5;
+    letter-spacing: 0.5px;
+  }
+  p {
+    font-size: $font-size-sm;
+    font-weight: $font-md;
+    line-height: $line-height-4;
+    letter-spacing: 0.5px;
+  }
+
+  &.alert-red {
+    border-color: #f85640;
+    background-color: #FFF8F8;
+    h5 {
+      color: #f85640;
+    }
+    p {
+      color: #79170a;
+    }
+  }
+  
+  &.alert-yellow {
+    border-color: #FBA63C;
+    background-color: #FFF8EF;
+    h5 {
+      color: #E18109;
+    }
+    p {
+      color: #BC741A;
+      ;
+    }
+  }
+  &.alert-green {
+    border-color: #34A770;
+    background-color:#DCF3EB;
+    h5 {
+      color: #13854E;
+    }
+    p {
+      color: #10673E;
+      ;
+      ;
+    }
+  }
+  &.alert-blue {
+    border-color: #34A770;
+    background-color:#E1F2FC;
+    h5 {
+      color: #08A0F7;
+    }
+    p {
+      color: #3387B7;
+    }
+  }
+}

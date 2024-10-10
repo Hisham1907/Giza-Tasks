@@ -1,0 +1,39 @@
+@use "../globals/mixins" as *;
+  
+// Progress Bar
+.progress-bar {
+    height: 5px;
+  
+    .progress-bar-value {
+      @include progress-bar-width(32%); 
+    }
+  }
+  .file{
+    .progress-bar-value {
+        @include progress-bar-width(46.9%);  
+      }
+  }
+  .progress-bar.bg-light-pink{
+    .progress-bar-value {
+        @include progress-bar-width(37.5%);  
+      }
+  }
+  .progress-bar.bg-light-green{
+    .progress-bar-value {
+        @include progress-bar-width(60%);  
+      }
+  }
+  .progress-bar.bg-light-blue{
+    .progress-bar-value {
+        @include progress-bar-width(28.5%);  
+      }
+  }
+  // Progress Images
+  .progress-images {
+    img {
+      border-radius: 50%;
+      margin-right: -12px;
+      border: 3px solid #fff;
+    }
+  }
+  

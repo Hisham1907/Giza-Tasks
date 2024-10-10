@@ -1,0 +1,25 @@
+@use "../globals/variables" as *;
+@use "../globals/colors" as *;
+@use "../globals/typography" as *;
+@use "../globals/mixins" as *;
+
+// _header.scss
+header {
+
+  nav {
+    ul {
+      gap: 3.4rem;
+      li {
+        .active {
+          color: $blue;
+        }
+        a{
+          transition: .5s all;
+          &:hover{
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use "../globals/variables" as *;
+@use "../globals/colors" as *;
+@use "../globals/typography" as *;
+// _buttons.scss
+.btn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $border-radius-sm;
+  cursor: pointer;
+  font-size: $font-size-md;
+  transition: background-color 0.3s ease;
+  border: 0;
+ 
+}

@@ -1,0 +1,13 @@
+.search-bar {
+    input {
+      background-color: transparent;
+      outline: 0;
+      border: none;
+      &::placeholder {
+        font-size: 12px;
+        line-height: 12px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+ 
