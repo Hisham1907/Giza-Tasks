@@ -1,0 +1,46 @@
+@use "../globals/variables" as *;
+@use "../globals/colors" as *;
+@use "../globals/typography" as *;
+// _cards.scss
+.card {
+  padding: $spacing-3xl;
+  border-radius: $border-radius-md;
+  background-color: white;
+ 
+}
+.active-search {
+  background-color: #f0f5fc;
+  border-left: 4px solid #08a0f7;
+}
+
+.floated-icon {
+  top: 12px;
+  right: 12px;
+}
+.floated-icon-2 {
+  top: 15px;
+  right: 15px;
+}
+
+.highlight {
+  display: inline-block;
+  background-color: #ceecfd;
+  color: #1778b0;
+  border-radius: $border-radius-lg;
+  padding: $spacing-xs $spacing-md;
+}
+
+
+
+// Top Arrow
+.top-arrow {
+  position: absolute; 
+  top: -10px; 
+  right: 10px; 
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff; 
+}
+
+

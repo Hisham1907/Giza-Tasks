@@ -1,0 +1,32 @@
+
+// Checkbox
+.unchecked-task {
+    .unchecked-icon {
+      display: block;
+    }
+    .checked-icon {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .unchecked-icon {
+      display: none;
+    }
+
+    input[type="checkbox"]:checked + .unchecked-icon + .checked-icon {
+      display: block;
+    }
+  }
+.checked-task {
+.unchecked-icon{
+  display: none;
+}
+.checked-icon {
+  display: block;
+}
+input[type="checkbox"]:checked +.checked-icon{
+  display: none;
+}
+input[type="checkbox"]:checked +.checked-icon +.unchecked-icon{
+  display: block;
+}
+}

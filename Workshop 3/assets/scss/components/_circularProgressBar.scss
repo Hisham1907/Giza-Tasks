@@ -1,0 +1,32 @@
+.circular-progress-bar {
+    svg {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      transform: rotate(90deg);
+  
+      circle {
+        fill: none;
+        stroke-width: 10;
+        stroke: #000;
+        transform: translate(5px, 5px);
+  
+        stroke-dasharray: 440;
+        stroke-dashoffset: 440;
+        stroke-linecap: round;
+      }
+      circle:nth-child(1) {
+        stroke-dashoffset: 0;
+        stroke: #f3f3f3;
+      }
+      circle:nth-child(2) {
+        stroke-dashoffset: calc(440 - (440 * 75) / 100);
+        stroke: #46bd84;
+      }
+    }
+    .progress-data {
+      top: 0;
+      left: 0;
+      height: 100%;
+    }
+  }

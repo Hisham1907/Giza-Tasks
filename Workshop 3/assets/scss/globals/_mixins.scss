@@ -1,0 +1,7 @@
+
+@mixin progress-bar-width($width) {
+  width: $width;
+  height: inherit;
+}
+
+

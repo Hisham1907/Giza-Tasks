@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>projectCard</title>
+  </head>
+  <body class="p-6">
+    <!-- Project Card -->
+    <div class="card shadow position-relative">
+      <svg
+        class="position-absolute floated-icon"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <circle cx="6" cy="12" r="2" fill="#A8B5CB" />
+        <circle cx="12.4001" cy="12" r="2" fill="#A8B5CB" />
+        <circle cx="18.8001" cy="12" r="2" fill="#A8B5CB" />
+      </svg>
+      <h4 class="fs-3xl fw-lg letter-spacing-xs line-height-10 m-1-b">
+        Konsep design homepage
+      </h4>
+      <div class="d-flex gap-md m-3-b">
+        <svg
+          width="13"
+          height="15"
+          viewBox="0 0 13 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.63333 0.666667C7.55412 0.278611 7.21272 0 6.81667 0H0.833333C0.373096 0 0 0.373096 0 0.833333V13.3333C0 13.7936 0.373096 14.1667 0.833333 14.1667C1.29357 14.1667 1.66667 13.7936 1.66667 13.3333V8.33333H6.33333L6.53333 9.33333C6.60895 9.72355 6.95254 10.004 7.35 10H11.6667C12.1269 10 12.5 9.62691 12.5 9.16667V2.5C12.5 2.03976 12.1269 1.66667 11.6667 1.66667H7.83333L7.63333 0.666667Z"
+            fill="#C4CAD3"
+          />
+        </svg>
+        <span class="fs-sm fw-md letter-spacing-xs text-gray-2 line-height-7"
+          >Due Nov 24</span
+        >
+      </div>
+      <p class="fs-md letter-spacing-md line-height-5 m-5-b">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam
+      </p>
+      <div class="progress">
+        <div class="d-flex justify-between m-2-b">
+          <h5 class="fs-md fw-lg letter-spacing-xs line-height-5">
+            Project Progress
+          </h5>
+          <span class="fs-md fw-lg letter-spacing-xs line-height-5">32%</span>
+        </div>
+        <div class="progress-bar rounded-full m-6-b bg-light-green">
+          <div class="progress-bar-value rounded-full bg-green"></div>
+        </div>
+        <div>
+          <div class="d-flex justify-between align-center">
+            <div class="d-flex align-center gap-sm">
+              <div class="progress-images d-flex m-1-r">
+                <img src="../assets/images/angela.svg" alt="Angela" />
+                <img src="../assets/images/samantha.svg" alt="Samantha" />
+                <img src="../assets/images/karen.svg" alt="Karen" />
+              </div>
+              <span class="fs-sm letter-spacing-md line-height-4"
+                >+ 15 people</span
+              >
+            </div>
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 28 28"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.6 14C0.6 13.5562 0.621549 13.1177 0.663627 12.6853L0.0664486 12.6272C0.156664 11.7002 0.337286 10.7997 0.599385 9.93464L1.17361 10.1086C1.43027 9.26148 1.7686 8.44975 2.17952 7.68257L1.65061 7.39927C2.08523 6.58784 2.59748 5.82423 3.17744 5.11836L3.64103 5.49925C4.19833 4.82096 4.82096 4.19833 5.49925 3.64103L5.11836 3.17744C5.82423 2.59748 6.58784 2.08523 7.39927 1.65061L7.68257 2.17952C8.44975 1.7686 9.26148 1.43027 10.1086 1.17361L9.93464 0.599385C10.7997 0.337286 11.7002 0.156664 12.6272 0.0664485L12.6853 0.663627C13.1177 0.621549 13.5562 0.6 14 0.6C14.4438 0.6 14.8823 0.621549 15.3147 0.663627L15.3728 0.0664486C16.2998 0.156664 17.2003 0.337286 18.0654 0.599385L17.8914 1.17361C18.7385 1.43027 19.5502 1.7686 20.3174 2.17952L20.6007 1.65061C21.4122 2.08523 22.1758 2.59748 22.8816 3.17744L22.5007 3.64103C23.179 4.19833 23.8017 4.82096 24.359 5.49925L24.8226 5.11836C25.4025 5.82423 25.9148 6.58784 26.3494 7.39927L25.8205 7.68257C26.2314 8.44975 26.5697 9.26148 26.8264 10.1086L27.4006 9.93464C27.6627 10.7997 27.8433 11.7002 27.9336 12.6272L27.3364 12.6853C27.3785 13.1177 27.4 13.5562 27.4 14C27.4 14.4438 27.3785 14.8823 27.3364 15.3147L27.9336 15.3728C27.8433 16.2998 27.6627 17.2003 27.4006 18.0654L26.8264 17.8914C26.5697 18.7385 26.2314 19.5502 25.8205 20.3174L26.3494 20.6007C25.9148 21.4122 25.4025 22.1758 24.8226 22.8816L24.359 22.5007C23.8017 23.179 23.179 23.8017 22.5007 24.359L22.8816 24.8226C22.1758 25.4025 21.4122 25.9148 20.6007 26.3494L20.3174 25.8205C19.5502 26.2314 18.7385 26.5697 17.8914 26.8264L18.0654 27.4006C17.2003 27.6627 16.2998 27.8433 15.3728 27.9336L15.3147 27.3364C14.8823 27.3785 14.4438 27.4 14 27.4C13.5562 27.4 13.1177 27.3785 12.6853 27.3364L12.6272 27.9336C11.7002 27.8433 10.7997 27.6627 9.93464 27.4006L10.1086 26.8264C9.26148 26.5697 8.44975 26.2314 7.68257 25.8205L7.39927 26.3494C6.58784 25.9148 5.82423 25.4025 5.11836 24.8226L5.49925 24.359C4.82096 23.8017 4.19833 23.179 3.64103 22.5007L3.17744 22.8816C2.59748 22.1758 2.08523 21.4122 1.65061 20.6007L2.17952 20.3174C1.7686 19.5502 1.43027 18.7385 1.17361 17.8914L0.599385 18.0654C0.337286 17.2003 0.156664 16.2998 0.0664485 15.3728L0.663627 15.3147C0.621549 14.8823 0.6 14.4438 0.6 14Z"
+                fill="white"
+                stroke="#D0D0D0"
+                stroke-width="1.2"
+                stroke-dasharray="3 3"
+              />
+              <path
+                d="M18.4005 14.6181H15.5725V17.5161H14.0885V14.6181H11.2605V13.2741H14.0885V10.3761H15.5725V13.2741H18.4005V14.6181Z"
+                fill="#C9C9C9"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
