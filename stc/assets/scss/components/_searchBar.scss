@@ -1,0 +1,13 @@
+.search-bar {
+gap: 12px;
+border-bottom: 3px solid #8E9AA0;
+    input {
+      background-color: transparent;
+      outline: 0;
+      border: none;
+       &::placeholder {
+        color: #8E9AA0;
+       }
+    }
+  }
+ 
