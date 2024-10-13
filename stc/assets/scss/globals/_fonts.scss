@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: "stc regular";
+    font-weight: 400;
+    src: url("../../fonts/alfont_com_stc-regular-webfont.woff") format("woff");
+  }  
+  @font-face {
+    font-family: "stc medium";
+    src: url("../font/STC Forward Medium.ttf") format("woff");
+  }
+  @font-face {
+    font-family: "stc bold";
+    src: url("../../fonts/alfont_com_stc-bold-webfont.woff") format("woff");
+  }
+
+  $font-primary:"stc regular";
+  $font-medium:"stc medium";
+  $font-bold:"stc bold";
+  .text-med{
+    font-family: $font-medium;
+    font-weight: 600;
+  }
+.text-xl{
+    font-family: $font-bold;
+    font-weight: 700;
+  }

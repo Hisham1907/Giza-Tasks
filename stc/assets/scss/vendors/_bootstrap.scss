@@ -1,0 +1,98 @@
+
+$primary: #4f008c;
+$secondary: #8e9aa0;
+$danger: #ff375e;
+$light: #f6f6f6;
+$dark: #f3f3f1;
+
+$spacer: 1rem;
+// 10 ,16,24 ,28 , 30 ,60 ,
+// Updated spacers for more balanced spacing
+$spacers: (
+  0: 0,
+  1: 4px,   // Reduced from 5px
+  2: 8px,   // Reduced from 10px
+  3: 12px,  // Smoothed from 16px
+  4: 16px,  // Common comfortable spacing
+  5: 20px,  // New intermediate value
+  6: 24px,  // Common padding
+  7: 32px,  // Smoothed from 36px
+  8: 40px,  // New intermediate value
+  9: 48px,  // Slightly reduced from 60px
+);
+
+// Font sizes 
+// Adjusted font sizes for smoother transitions
+$custom-font-sizes: (
+  1: 28px,  // Reduced from 32px
+  2: 22px,  // Reduced from 24px
+  3: 18px,  // Reduced from 20px
+  4: 16px,  // Keeping this as a base font size
+  5: 14px   // Increased from 13px
+);
+
+// Generate font-size utility classes
+@each $key, $size in $custom-font-sizes {
+  .fs-custom-#{$key} {
+    font-size: $size !important;
+  }
+}
+
+// Generate font-size utility classes
+@each $key, $size in $custom-font-sizes {
+  .fs-custom-#{$key} {
+    font-size: $size !important;
+  }
+}
+
+@import "mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "functions";
+@import "variables";
+@import "variables-dark";
+@import "maps";
+@import "mixins";
+@import "utilities";
+
+// Layout & components
+@import "root";
+@import "reboot";
+@import "type";
+@import "images";
+@import "containers";
+@import "grid";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "transitions";
+@import "dropdown";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "accordion";
+@import "breadcrumb";
+@import "pagination";
+@import "badge";
+@import "alert";
+@import "progress";
+@import "list-group";
+@import "close";
+@import "toasts";
+@import "modal";
+@import "tooltip";
+@import "popover";
+@import "carousel";
+@import "spinners";
+@import "offcanvas";
+@import "placeholders";
+
+// Helpers
+@import "helpers";
+
+// Utilities
+@import "utilities/api";
+// scss-docs-end import-stack

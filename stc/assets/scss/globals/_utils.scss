@@ -1,0 +1,32 @@
+.aside-active {
+  background-color: #420374;
+  font-weight: 700;
+  position: relative;
+}
+.aside-active::before{
+    content: "";
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+width: 6px;
+background-color:#ff375e;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.gap-lg{
+    gap: 40px;
+}
+.gap-sm{
+    gap: 6px;
+}
+.links-hover{
+  transition: .5s all;
+  
+}
+.links-hover:hover{
+  letter-spacing: 1px;
+  color: #c4b5fd;
+  
+}
