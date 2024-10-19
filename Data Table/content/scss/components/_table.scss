@@ -1,0 +1,29 @@
+table {
+  border-bottom: 1px solid #eaf1f3 !important;
+  thead {
+    th {
+      color: #87959b;
+    }
+  }
+  tbody {
+    tr {
+      cursor: pointer;
+      &:nth-child(even) {
+        background-color: #fafbfb !important;
+       
+      }
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        border: 3px solid #87959b;
+        appearance: none;
+        background-color: #fff;
+        cursor: pointer;
+        border-radius: 2px;
+      }
+      &:has(input[type="checkbox"]){
+        text-align: center;
+    }
+    }
+  }
+}
