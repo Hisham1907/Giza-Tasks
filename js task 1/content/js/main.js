@@ -13,9 +13,10 @@ form.addEventListener("submit", function (e) {
       confirmButtonText: "Okay",
     });
   } else {
-    let slicedPart = userInput.value.split("").slice(-3);
-    const result = slicedPart.join("") + userInput.value + slicedPart.join("");
-    // Clearing the input
+    let lastThreeChars = userInput.value.split("").slice(-3);
+    let lastThreeCharsJoined = lastThreeChars.join("");
+    const result =
+      lastThreeCharsJoined + userInput.value + lastThreeCharsJoined;
     userInput.value = "";
     Swal.fire({
       title: "🚀 Your Twisted String is Ready!",
