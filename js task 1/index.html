@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="content/css/bootstrap.min.css" />
+    <title>Fun String Manipulator</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <h1 class="text-center mb-3">Welcome to String Manipulator!</h1>
+      <p class="text-center text-muted mb-4">Let's have some fun with your text!</p>
+
+      <div class="row justify-content-center">
+        <div class="col col-12 col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h2 class="text-center mb-4">🧩 Play with Your String!</h2>
+              <form
+                id="stringForm"
+                action="index.html"
+                enctype="application/x-www-form-urlencoded"
+              >
+                <div class="mb-4">
+                  <label for="userString" class="form-label mb-3"
+                    >Enter a string <span class="fw-bold">min 3 characters</span> :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="userString"
+                    placeholder="Try your name!"
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Let's Twist It!
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="content/js/bootstrap.bundle.js"></script>
+    <script src="content/js/main.js"></script>
+  </body>
+</html>
