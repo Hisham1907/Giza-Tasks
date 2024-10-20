@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data table</title>
+    <link rel="stylesheet" href="content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="content/css/styles.css" />
+  </head>
+  <body class="bg-light p-5 ">
+   <div class="row">
+    <div class="col col-12 ">
+      <div class="input-group mb-3 shadow-sm">
+        <label class="input-group-text " for="searchBar" >
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.5">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.91314 10.8263C8.6266 10.8263 10.8263 8.6266 10.8263 5.91314C10.8263 3.19969 8.6266 1 5.91314 1C3.19969 1 1 3.19969 1 5.91314C1 8.6266 3.19969 10.8263 5.91314 10.8263Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9.71931 9.71888L12.8074 12.807" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            </svg>
+            
+        </label>
+        <input type="text" class="form-control" placeholder="Search by Name or Company ............" aria-label="search" id="searchBar">
+      </div>
+    <table class="table table-hover bg-white rounded-2 shadow-sm table-responsive" >
+        <thead>
+          <tr>
+            <th class="p-3"></th>
+            <th class="p-3">Name</th>
+            <th class="p-3">Company</th>
+            <th class="p-3">User</th>
+            <th class="p-3">Cart</th>
+            <th class="p-3"></th>
+             
+          </tr>
+        </thead>
+        <tbody id="table-content">
+  
+        </tbody>
+    </table>
+    </div>
+   </div>
+     
+<!-- Update Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="updateModalLabel">Update Customer Info</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Form starts here -->
+        <form id="updateForm" action="index.html" enctype="application/x-www-form-urlencoded">
+          <div class="mb-3">
+            <label for="customerName" class="form-label">Customer Name</label>
+            <input type="text" class="form-control" id="customerName" placeholder="Enter customer name" required>
+          </div>
+          <div class="mb-3">
+            <label for="customerCompany" class="form-label">Company</label>
+            <input type="text" class="form-control" id="customerCompany" placeholder="Enter company name" required>
+          </div>
+          <div class="mb-3">
+            <label for="customerCart" class="form-label">Cart Value</label>
+            <input type="text" class="form-control" id="customerCart" placeholder="Enter cart value" required>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" id="updateBtn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="content/js/bootstrap.bundle.js"
+     ></script>
+    <script src="./content/js/main.js"></script>
+  </body>
+</html>

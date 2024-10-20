@@ -1,0 +1,24 @@
+table thead th {
+  color: #87959b;
+}
+table tbody tr:nth-child(even) {
+  background-color: #fafbfb !important;
+}
+table tbody tr input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #87959b;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  cursor: pointer;
+  border-radius: 2px;
+}
+table tbody tr:has(input[type=checkbox]) {
+  text-align: center;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
