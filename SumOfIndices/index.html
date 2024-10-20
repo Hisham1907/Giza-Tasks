@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="content/css/bootstrap.min.css" />
+    <title>Array Summation</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body class="bg-light">
+    <div class="container mt-5">
+      <h1 class="text-center mb-3">Welcome to Array Summation!</h1>
+      <p class="text-center text-muted mb-4">Combine your arrays easily!</p>
+
+      <div class="row justify-content-center">
+        <div class="col col-12 col-md-6">
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <h2 class="text-center mb-4"> Add Your Arrays!</h2>
+              <form
+                id="arrayForm"
+                action="index.html"
+                enctype="application/x-www-form-urlencoded"
+              >
+                <div class="mb-4">
+                  <label for="array1" class="form-label mb-3">
+                    Enter First Array :
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="arr1"
+                    placeholder="[1, 2, 3]"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label for="array2" class="form-label mb-3">
+                    Enter Second Array :
+                  </label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="arr2"
+                    placeholder="[4, 5, 6]"
+                  />
+                </div>
+
+                <button type="submit" id="submit-btn" class="btn btn-primary w-100">
+                  Sum Arrays
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="content/js/bootstrap.bundle.js"></script>
+    <script src="content/js/main.js"></script>
+  </body>
+</html>
