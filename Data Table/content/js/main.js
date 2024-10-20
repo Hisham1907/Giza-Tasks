@@ -104,7 +104,7 @@ function updateData() {
     } else {
       customers[currentIndex].customerName = customerName.value;
       customers[currentIndex].customerCompany = customerCompany.value;
-      customers[currentIndex].customerCart = parseInt(customerCart.value);
+      customers[currentIndex].customerCart = +customerCart.value;
       Swal.fire("Data Updated successfully", "", "success");
       localStorage.setItem("customers", JSON.stringify(customers));
     }
@@ -149,7 +149,7 @@ function searchData() {
   let content = "";
   searchResults.forEach((customer, idx) => {
     content += `
-     <tr >
+     <tr class="cursor-pointer">
           <td class="p-3" ><input type="checkbox"></th>
           <td class="p-3 text-start" >${customer.customerName}</td>
           <td class="p-3 text-start">${customer.customerCompany}</td>

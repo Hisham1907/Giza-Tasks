@@ -1,5 +1,4 @@
 table {
-  border-bottom: 1px solid #eaf1f3 !important;
   thead {
     th {
       color: #87959b;
@@ -7,10 +6,8 @@ table {
   }
   tbody {
     tr {
-      cursor: pointer;
       &:nth-child(even) {
         background-color: #fafbfb !important;
-       
       }
       input[type="checkbox"] {
         width: 18px;
