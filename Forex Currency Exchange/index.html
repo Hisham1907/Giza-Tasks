@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Exchange App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="text-center mb-5">
+        <h1>Forex Exchange</h1>
+        <p class="fw-bold text-muted">
+          Checkout the current price for a currency pair
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card p-4">
+            <h4>Select Currencies</h4>
+            <div class="mb-3">
+              <label for="currency1" class="form-label">Currency 1</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <span class="fi fi-eu"></span>
+                  <!-- Euro Flag -->
+                </span>
+                <select class="form-select" id="currency1">
+                  <option selected>Euro</option>
+                  <option>US Dollar</option>
+                  <option>Pound Sterling</option>
+                  <option>Japanese Yen</option>
+                </select>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="currency2" class="form-label">Currency 2</label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <span class="fi fi-us"></span>
+                  <!-- US Dollar Flag -->
+                </span>
+                <select class="form-select" id="currency2">
+                  <option selected>US Dollar</option>
+                  <option>Euro</option>
+                  <option>Pound Sterling</option>
+                  <option>Japanese Yen</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chart Section -->
+        <div class="col-md-6">
+          <div class="card p-4 shadow">
+            <div class="mb-1">
+              <div class="d-flex">
+                <span class="fi fi-eu flag-icon rounded me-2"></span>
+                <span class="fi fi-us flag-icon rounded"></span>
+              </div>
+              <h5 class="mt-2">EUR/USD</h5>
+            </div>
+            <canvas id="myChart"></canvas>
+            <div
+              class="btn-group mt-4 d-flex justify-content-between"
+              role="group"
+              aria-label="Chart Timeframe"
+            >
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio1"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-danger" for="btnradio1">15M</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio2"
+                autocomplete="off"
+              />
+              <label class="btn btn-outline-danger" for="btnradio2">1H</label>
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio3"
+                autocomplete="off"
+              />
+              <label
+                onclick="oldDaysHistory(1)"
+                class="btn btn-outline-danger"
+                for="btnradio3"
+                >1D</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio4"
+                autocomplete="off"
+              />
+              <label
+                onclick="oldDaysHistory(7)"
+                class="btn btn-outline-danger"
+                for="btnradio4"
+                >1W</label
+              >
+
+              <input
+                type="radio"
+                class="btn-check"
+                name="btnradio"
+                id="btnradio5"
+                autocomplete="off"
+                checked
+              />
+              <label
+                onclick="oldDaysHistory(30)"
+                class="btn btn-outline-danger"
+                for="btnradio5"
+                >1M</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="content/js/main.js"></script>
+  </body>
+</html>
