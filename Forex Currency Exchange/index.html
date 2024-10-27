@@ -12,10 +12,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css"
     />
+    <link rel="stylesheet" href="content/css/styles.css" />
   </head>
   <body>
     <div class="container mt-5">
-      <div class="text-center mb-5">
+      <div class="mb-5">
         <h1>Forex Exchange</h1>
         <p class="fw-bold text-muted">
           Checkout the current price for a currency pair
@@ -29,14 +30,10 @@
               <label for="currency1" class="form-label">Currency 1</label>
               <div class="input-group">
                 <span class="input-group-text">
-                  <span class="fi fi-eu"></span>
-                  <!-- Euro Flag -->
+                  <span id="drop-flag-1" class="fi fi-eu"></span>
                 </span>
                 <select class="form-select" id="currency1">
-                  <option selected>Euro</option>
-                  <option>US Dollar</option>
-                  <option>Pound Sterling</option>
-                  <option>Japanese Yen</option>
+                  <option value="EUR" selected>Euro</option>
                 </select>
               </div>
             </div>
@@ -44,14 +41,10 @@
               <label for="currency2" class="form-label">Currency 2</label>
               <div class="input-group">
                 <span class="input-group-text">
-                  <span class="fi fi-us"></span>
-                  <!-- US Dollar Flag -->
+                  <span id="drop-flag-2" class="fi fi-us"></span>
                 </span>
                 <select class="form-select" id="currency2">
-                  <option selected>US Dollar</option>
-                  <option>Euro</option>
-                  <option>Pound Sterling</option>
-                  <option>Japanese Yen</option>
+                  <option value="USD" selected>US Dollar</option>
                 </select>
               </div>
             </div>
@@ -61,12 +54,23 @@
         <!-- Chart Section -->
         <div class="col-md-6">
           <div class="card p-4 shadow">
-            <div class="mb-1">
-              <div class="d-flex">
-                <span class="fi fi-eu flag-icon rounded me-2"></span>
-                <span class="fi fi-us flag-icon rounded"></span>
+            <div class="mb-1 d-flex justify-content-between">
+              <div>
+                <div class="d-flex gap-sm">
+                  <span id="chart-flag-1" class="fi fi-eu rounded"></span>
+                  <span id="chart-flag-2" class="fi fi-us rounded"></span>
+                </div>
+                <h5 class="mt-2">
+                  <span id="chart-currency-1">EUR</span>/<span
+                    id="chart-currency-2"
+                    >USD</span
+                  >
+                </h5>
               </div>
-              <h5 class="mt-2">EUR/USD</h5>
+              <div>
+                <p class="fw-bold mb-0" id="closesAvg"></p>
+                <p class="fw-medium text-success" id="closesRate"></p>
+              </div>
             </div>
             <canvas id="myChart"></canvas>
             <div
@@ -81,7 +85,12 @@
                 id="btnradio1"
                 autocomplete="off"
               />
-              <label class="btn btn-outline-danger" for="btnradio1">15M</label>
+              <label
+                onclick="todaysHistory(15)"
+                class="btn btn-outline-danger"
+                for="btnradio1"
+                >15M</label
+              >
 
               <input
                 type="radio"
@@ -90,8 +99,12 @@
                 id="btnradio2"
                 autocomplete="off"
               />
-              <label class="btn btn-outline-danger" for="btnradio2">1H</label>
-
+              <label
+                onclick="todaysHistory(60)"
+                class="btn btn-outline-danger"
+                for="btnradio2"
+                >1H</label
+              >
               <input
                 type="radio"
                 class="btn-check"
