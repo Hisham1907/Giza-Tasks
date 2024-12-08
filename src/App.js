@@ -47,7 +47,10 @@ function App() {
   const handleSearch = (term) => {
     setSearchTerm(term);
     const filtered = developers.filter((dev) =>
-      `${dev.firstname} ${dev.lastname} ${dev.email} ${dev.id} ${dev.role} ${dev.department}`.trim().toLowerCase().includes(term.trim().toLowerCase())
+      `${dev.firstname} ${dev.lastname} ${dev.email} ${dev.id} ${dev.role} ${dev.department}`
+        .trim()
+        .toLowerCase()
+        .includes(term.trim().toLowerCase())
     );
     setFilteredDevelopers(filtered);
   };
@@ -58,25 +61,26 @@ function App() {
 
   return (
     <div className="p-4">
-        <div className="col-12 d-flex justify-content-between align-items-center">
+      <div className="d-flex flex-column flex-md-row justify-content-between align-items-center">
         <Logo />
         <Input
+          className="mt-3 mt-md-0"
           placeholder="Search ...."
           onChange={(e) => handleSearch(e.target.value)}
           value={searchTerm}
-         />
+        />
       </div>
       <h2 className="text-white my-4 text-center">Frontend Department</h2>
       <CustomButton className="mb-4" onClick={openAddModal}>
         New Member
       </CustomButton>
       <div className="table-responsive w-100">
-      <Table
-        developers={filteredDevelopers} 
-        toggleModal={toggleModal}
-        setSelectedDeveloper={setSelectedDeveloper}
-        getData={getData}
-      />
+        <Table
+          developers={filteredDevelopers}
+          toggleModal={toggleModal}
+          setSelectedDeveloper={setSelectedDeveloper}
+          getData={getData}
+        />
       </div>
       {showModal ? (
         <Modal
