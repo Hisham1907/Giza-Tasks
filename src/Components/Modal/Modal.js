@@ -39,36 +39,36 @@ const Overlay = ({
     }
   }, [selectedDeveloper, mode]);
 
-const validateFirstName=()=>{
-  if (!devFirstname.trim()) errors.firstname = "First Name cannot be empty.";
-  if (devFirstname.length < 3)
-    errors.firstname = "Name must be at least 3 characters long";
-  if (devFirstname.length > 30)
-    errors.firstname = "Name can't be more than 30 characters long";
-}
-  
-const validateLastName=()=>{
-  if (!devLastname.trim()) errors.lastname = "Last Name cannot be empty.";
-  if (devLastname.length < 3)
-    errors.lastname = "Name must be at least 3 characters long";
-  if (devLastname.length > 30)
-    errors.lastname = "Name can't be more than 30 characters long";
-}
- const validateEmail=()=>{
-  if (!devEmail.trim()) {
-    errors.email = "Email field cannot be empty.";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(devEmail)) {
-    errors.email = "Please enter a valid email address.";
-  }
- } 
- const validateInputs=()=>{
-  validateFirstName()
-  validateLastName();
-  validateEmail();
-   if (!devId.trim()) errors.id = "ID is required.";
-  if (!devRole.trim()) errors.role = "Role is required.";
-  if (!devDepartment.trim()) errors.department = "Department is required.";
- }
+  const validateFirstName = () => {
+    if (!devFirstname.trim()) errors.firstname = "First Name cannot be empty.";
+    if (devFirstname.length < 3)
+      errors.firstname = "Name must be at least 3 characters long";
+    if (devFirstname.length > 30)
+      errors.firstname = "Name can't be more than 30 characters long";
+  };
+
+  const validateLastName = () => {
+    if (!devLastname.trim()) errors.lastname = "Last Name cannot be empty.";
+    if (devLastname.length < 3)
+      errors.lastname = "Name must be at least 3 characters long";
+    if (devLastname.length > 30)
+      errors.lastname = "Name can't be more than 30 characters long";
+  };
+  const validateEmail = () => {
+    if (!devEmail.trim()) {
+      errors.email = "Email field cannot be empty.";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(devEmail)) {
+      errors.email = "Please enter a valid email address.";
+    }
+  };
+  const validateInputs = () => {
+    validateFirstName();
+    validateLastName();
+    validateEmail();
+    if (!devId.trim()) errors.id = "ID is required.";
+    if (!devRole.trim()) errors.role = "Role is required.";
+    if (!devDepartment.trim()) errors.department = "Department is required.";
+  };
   const handleSubmition = async (e) => {
     e.preventDefault();
     validateInputs();
@@ -86,7 +86,7 @@ const validateLastName=()=>{
       });
       return;
     }
-  
+
     // Prepare the developer data
     const newDeveloper = {
       id: devId,
@@ -96,7 +96,7 @@ const validateLastName=()=>{
       role: devRole,
       department: devDepartment,
     };
-  
+
     try {
       if (mode === "add") {
         await axios.post("http://localhost:3001/frontend", newDeveloper);
@@ -143,7 +143,7 @@ const validateLastName=()=>{
       });
     }
   };
-  
+
   return (
     <div
       className={`${styles.overlay} ${showModal ? styles.overlayShow : null}`}
@@ -156,66 +156,64 @@ const validateLastName=()=>{
           </button>
         </header>
         <main className={`border-bottom ${styles.inputFields} `}>
-             <Input
-              label="First Name"
-              id="firstname"
-              type="text"
-              value={devFirstname}
-              onChange={(e) => setDevFirstname(e.target.value)}
-              placeholder={"Enter First Name"}
-              disabled={mode === "view" ? true : false}
-            />
-            <Input
-              label="Last Name"
-              id="lastname"
-              type="text"
-              value={devLastname}
-              onChange={(e) => setDevLastname(e.target.value)}
-              placeholder={"Enter Last Name"}
-              disabled={mode === "view" ? true : false}
-            />
-            <Input
-              label="ID"
-              id="id"
-              type="number"
-              value={devId}
-              onChange={(e) => setDevId(e.target.value)}
-              placeholder={"Enter the ID"}
-              disabled={mode === "view" ? true : false}
-            />
-            <Input
-              label="Email"
-              id="email"
-              type="email"
-              value={devEmail}
-              onChange={(e) => setDevEmail(e.target.value)}
-              placeholder={"Enter the email"}
-              disabled={mode === "view" ? true : false}
-            />
-            <Input
-              label="Role"
-              id="role"
-              type="text"
-              value={devRole}
-              onChange={(e) => setDevRole(e.target.value)}
-              placeholder={"Enter the role"}
-              disabled={mode === "view" ? true : false}
-            />
-            <Input
-              label="Department"
-              id="department"
-              type="text"
-              value={devDepartment}
-              onChange={(e) => setDevDepartment(e.target.value)}
-              placeholder={"Enter the department"}
-              disabled={mode === "view" ? true : false}
-            />
-         </main>
+          <Input
+            label="First Name"
+            id="firstname"
+            type="text"
+            value={devFirstname}
+            onChange={(e) => setDevFirstname(e.target.value)}
+            placeholder={"Enter First Name"}
+            disabled={mode === "view" ? true : false}
+          />
+          <Input
+            label="Last Name"
+            id="lastname"
+            type="text"
+            value={devLastname}
+            onChange={(e) => setDevLastname(e.target.value)}
+            placeholder={"Enter Last Name"}
+            disabled={mode === "view" ? true : false}
+          />
+          <Input
+            label="ID"
+            id="id"
+            type="number"
+            value={devId}
+            onChange={(e) => setDevId(e.target.value)}
+            placeholder={"Enter the ID"}
+            disabled={mode === "view" ? true : false}
+          />
+          <Input
+            label="Email"
+            id="email"
+            type="email"
+            value={devEmail}
+            onChange={(e) => setDevEmail(e.target.value)}
+            placeholder={"Enter the email"}
+            disabled={mode === "view" ? true : false}
+          />
+          <Input
+            label="Role"
+            id="role"
+            type="text"
+            value={devRole}
+            onChange={(e) => setDevRole(e.target.value)}
+            placeholder={"Enter the role"}
+            disabled={mode === "view" ? true : false}
+          />
+          <Input
+            label="Department"
+            id="department"
+            type="text"
+            value={devDepartment}
+            onChange={(e) => setDevDepartment(e.target.value)}
+            placeholder={"Enter the department"}
+            disabled={mode === "view" ? true : false}
+          />
+        </main>
         {mode !== "view" && (
           <footer>
-            <CustomButton>
-              {mode === "add" ? "Add" : "Update"}
-            </CustomButton>
+            <CustomButton>{mode === "add" ? "Add" : "Update"}</CustomButton>
           </footer>
         )}
       </form>

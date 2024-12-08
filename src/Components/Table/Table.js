@@ -4,7 +4,7 @@ import TableCard from '../TableCard/TableCard'
 const Table = ({developers,toggleModal,setSelectedDeveloper,getData}) => {
 const tableData=developers.map(developer =><TableCard developer={developer} key={developer.id} toggleModal={toggleModal} setSelectedDeveloper={setSelectedDeveloper} getData={getData}/>)
   return <>
-<table className="table table-responsive overflow-auto">
+<table className="table w-100">
   <thead >
     <tr >
       <th className="p-3 text-white">ID</th>

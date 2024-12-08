@@ -18,11 +18,13 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(0.6);
   width: 50%;
+  max-height: 90%;
+
   background-color: #222b45;
   border: 1px solid #3c3e3f;
   box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1);
   border-radius: 9px;
-  overflow: auto;
+  overflow-y: auto;
   opacity: 0;
   visibility: hidden;
   transition: 0.5s all ease-in;
@@ -68,3 +70,31 @@ footer {
   row-gap: 12px;
 }
 
+@media (max-width: 1024px) {
+
+  .overlay {
+ 
+    width: 60%;
+ 
+  }
+}
+@media (max-width: 768px) {
+
+  .overlay {
+ 
+    width: 80%;
+ 
+  }
+}
+@media (max-width: 600px) {
+
+  .overlay {
+    width: 95%;
+  
+  }
+  .inputFields {
+    grid-template-columns: 1fr;
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+}

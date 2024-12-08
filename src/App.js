@@ -58,7 +58,7 @@ function App() {
 
   return (
     <div className="p-4">
-      <div className=" d-flex justify-content-between">
+        <div className="col-12 d-flex justify-content-between align-items-center">
         <Logo />
         <Input
           placeholder="Search ...."
@@ -70,12 +70,14 @@ function App() {
       <CustomButton className="mb-4" onClick={openAddModal}>
         New Member
       </CustomButton>
+      <div className="table-responsive w-100">
       <Table
-        developers={filteredDevelopers} // Use filteredDevelopers
+        developers={filteredDevelopers} 
         toggleModal={toggleModal}
         setSelectedDeveloper={setSelectedDeveloper}
         getData={getData}
       />
+      </div>
       {showModal ? (
         <Modal
           toggleModal={toggleModal}
