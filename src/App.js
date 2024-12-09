@@ -94,6 +94,7 @@ function App() {
           mode={mode}
           getData={getData}
           devCount={devCount}
+          developers={developers}
         />
       ) : null}
     </div>

@@ -19,7 +19,8 @@ const Overlay = ({
   selectedDeveloper,
   mode,
   getData,
-  devCount
+  devCount,
+  developers
 }) => {
   const [devFirstname, setDevFirstname] = useState("");
   const [devLastname, setDevLastname] = useState("");
@@ -61,6 +62,16 @@ const Overlay = ({
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(devEmail)) {
       errors.email = "Please enter a valid email address.";
     }
+    if (mode === "add" && developers.some(developer => developer.email === devEmail)) {
+      errors.email = "Email already exists.";
+    } else if (
+      mode === "update" &&
+      developers.some(developer => developer.email === devEmail && developer.id !== selectedDeveloper.id)
+    ) {
+      errors.email = "Email already exists.";
+    }
+   
+  
   };
   const validateInputs = () => {
     validateFirstName();
@@ -225,7 +236,8 @@ const Modal = ({
   selectedDeveloper,
   mode,
   getData,
-  devCount
+  devCount,
+  developers
 }) => {
   return (
     <Fragment>
@@ -239,6 +251,7 @@ const Modal = ({
             selectedDeveloper={selectedDeveloper}
             getData={getData}
             devCount={devCount}
+            developers={developers}
           />
         </Fragment>,
         document.getElementById("modal")
