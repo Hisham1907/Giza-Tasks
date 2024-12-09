@@ -6,7 +6,7 @@ const TableCard = ({ developer, toggleModal, setSelectedDeveloper,getData }) => 
   const { id,firstname,lastname, email, role, department } = developer;
   const handleView = (id) => {
     const fetchData = async () => {
-      const { data } = await axios.get(`http://localhost:3001/frontend/${id}`);
+      const { data } = await axios.get(`https://675696bf11ce847c992d52f1.mockapi.io/frontendSystem/frontend/${id}`);
       setSelectedDeveloper(data);
       toggleModal("view", developer);
     };
@@ -27,7 +27,7 @@ const TableCard = ({ developer, toggleModal, setSelectedDeveloper,getData }) => 
     }).then(async(result) => {
       if (result.isConfirmed) {
         const fetchData = async () => {
-          await axios.delete(`http://localhost:3001/frontend/${id}`);
+          await axios.delete(`https://675696bf11ce847c992d52f1.mockapi.io/frontendSystem/frontend/${id}`);
         };
         await fetchData();
         getData();

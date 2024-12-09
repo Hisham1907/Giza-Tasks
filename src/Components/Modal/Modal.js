@@ -19,6 +19,7 @@ const Overlay = ({
   selectedDeveloper,
   mode,
   getData,
+  devCount
 }) => {
   const [devFirstname, setDevFirstname] = useState("");
   const [devLastname, setDevLastname] = useState("");
@@ -65,8 +66,7 @@ const Overlay = ({
     validateFirstName();
     validateLastName();
     validateEmail();
-    if (!devId.trim()) errors.id = "ID is required.";
-    if (!devRole.trim()) errors.role = "Role is required.";
+     if (!devRole.trim()) errors.role = "Role is required.";
     if (!devDepartment.trim()) errors.department = "Department is required.";
   };
   const handleSubmition = async (e) => {
@@ -99,7 +99,7 @@ const Overlay = ({
 
     try {
       if (mode === "add") {
-        await axios.post("http://localhost:3001/frontend", newDeveloper);
+        await axios.post("https://675696bf11ce847c992d52f1.mockapi.io/frontendSystem/frontend", newDeveloper);
       } else if (mode === "update") {
         if (
           selectedDeveloper.firstname === devFirstname &&
@@ -119,7 +119,7 @@ const Overlay = ({
           return;
         }
         await axios.put(
-          `http://localhost:3001/frontend/${selectedDeveloper.id}`,
+          `https://675696bf11ce847c992d52f1.mockapi.io/frontendSystem/frontend/${selectedDeveloper.id}`,
           newDeveloper
         );
       }
@@ -178,10 +178,9 @@ const Overlay = ({
             label="ID"
             id="id"
             type="number"
-            value={devId}
+            value={mode==='add'?devCount:devId}
             onChange={(e) => setDevId(e.target.value)}
-            placeholder={"Enter the ID"}
-            disabled={mode === "view" ? true : false}
+             disabled={true}
           />
           <Input
             label="Email"
@@ -226,6 +225,7 @@ const Modal = ({
   selectedDeveloper,
   mode,
   getData,
+  devCount
 }) => {
   return (
     <Fragment>
@@ -238,6 +238,7 @@ const Modal = ({
             showModal={showModal}
             selectedDeveloper={selectedDeveloper}
             getData={getData}
+            devCount={devCount}
           />
         </Fragment>,
         document.getElementById("modal")

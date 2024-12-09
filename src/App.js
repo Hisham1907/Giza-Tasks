@@ -11,6 +11,7 @@ import Input from "./Components/Input/Input.js";
 function App() {
   const [developers, setDevelopers] = useState([]);
   const [filteredDevelopers, setFilteredDevelopers] = useState([]);
+  const [devCount, setDevCount] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [selectedDeveloper, setSelectedDeveloper] = useState(null);
   const [mode, setMode] = useState("add");
@@ -18,9 +19,12 @@ function App() {
 
   const getData = async () => {
     try {
-      const { data } = await axios.get("http://localhost:3001/frontend");
+      const { data } = await axios.get(
+        "https://675696bf11ce847c992d52f1.mockapi.io/frontendSystem/frontend"
+      );
       setDevelopers(data);
-      setFilteredDevelopers(data); // Initialize filteredDevelopers
+      setFilteredDevelopers(data); // Initialize filteredDevelopers      
+      setDevCount(data.length+1)
     } catch (error) {
       Swal.fire({
         position: "center",
@@ -89,6 +93,7 @@ function App() {
           selectedDeveloper={selectedDeveloper}
           mode={mode}
           getData={getData}
+          devCount={devCount}
         />
       ) : null}
     </div>
