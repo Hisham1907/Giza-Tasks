@@ -1,0 +1,84 @@
+{
+  "frontend": [
+    {
+      "id": "200",
+      "firstname": "Hisham",
+      "lastname": "Rabea",
+      "email": "hisham.abdulsalam@gizasystems.com",
+      "role": "Intern",
+      "department": "Integration"
+    },
+    {
+      "id": "111",
+      "firstname": "Mohamed",
+      "lastname": "Yousry",
+      "email": "mohamed.yousry@gizasystems.com",
+      "role": "Team Lead",
+      "department": "Integration"
+    },
+    {
+      "id": "222",
+      "firstname": "kareem",
+      "lastname": "Nour",
+      "email": "kareem.emam@gizasystems.com",
+      "role": "Team Lead",
+      "department": "Integration"
+    },
+    {
+      "id": "250",
+      "firstname": "Ahmed",
+      "lastname": "Galal",
+      "email": "ahmed.abounar@gizasystems.com",
+      "role": "Mid Senior",
+      "department": "Integration"
+    },
+    {
+      "id": "150",
+      "firstname": "Fady ",
+      "lastname": "Nasrallah",
+      "email": "fady.nasrallah@gizasystems.com",
+      "role": "Mid Senior",
+      "department": "Integration"
+    },
+    {
+      "id": "155",
+      "firstname": "Mohamed",
+      "lastname": "Osama",
+      "email": "mohamed.mahgoub@gizasystems.com",
+      "role": "Senior",
+      "department": "Integration"
+    },
+    {
+      "id": "120",
+      "firstname": "Mark",
+      "lastname": "Fady",
+      "email": "mark.fady@gizasystems.com",
+      "role": "Junior",
+      "department": "Integration"
+    },
+    {
+      "id": "333",
+      "firstname": "Marwa",
+      "lastname": "Taha",
+      "email": "marwa.taha@gizasystems.com",
+      "role": "Junior",
+      "department": "Integration"
+    },
+    {
+      "id": "180",
+      "firstname": "Mazen",
+      "lastname": "Yousry",
+      "email": "mazen.saleh@gizasystems.com",
+      "role": "Intern",
+      "department": "Integration"
+    },
+    {
+      "id": "110",
+      "firstname": "Mahmoud",
+      "lastname": "Abdulazim",
+      "email": "mahmoud.abdulazim@gizasystems.com",
+      "role": "Intern",
+      "department": "Integration"
+    }
+  ]
+}

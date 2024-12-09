@@ -1,0 +1,100 @@
+.backdrop {
+  z-index: 500;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all ease-in;
+  transform: scale(0.5);
+}
+.overlay {
+  z-index: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.6);
+  width: 50%;
+  max-height: 90%;
+
+  background-color: #222b45;
+  border: 1px solid #3c3e3f;
+  box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s all ease-in;
+}
+.backdropShow {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+}
+.overlayShow {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+}
+.closeButton {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: 700;
+  transition: 0.3s all ease-in;
+}
+.closeButton:hover {
+  color: #fff;
+}
+.modal-head {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+.inputFields {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 12px;
+  row-gap: 12px;
+}
+
+@media (max-width: 1024px) {
+
+  .overlay {
+ 
+    width: 60%;
+ 
+  }
+}
+@media (max-width: 768px) {
+
+  .overlay {
+ 
+    width: 80%;
+ 
+  }
+}
+@media (max-width: 600px) {
+
+  .overlay {
+    width: 95%;
+  
+  }
+  .inputFields {
+    grid-template-columns: 1fr;
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+}

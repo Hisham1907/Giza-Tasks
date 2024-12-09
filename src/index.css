@@ -1,0 +1,27 @@
+ 
+body{
+  background-color: #222B45;
+  color: #fff;
+}
+img{
+  filter: invert(1) brightness(2) hue-rotate(160deg);
+width: 180px; 
+}
+
+
+ 
+@media (max-width: 768px) {
+
+  img{
+   width: 150px; 
+  }
+  
+}
+@media (max-width: 600px) {
+
+  img{
+    width: 130px; 
+   }
+   
+ 
+}

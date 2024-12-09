@@ -1,0 +1,19 @@
+ table thead tr th {
+    background-color: #151A30 !important;
+     border-block: 1px solid #fff;
+     cursor: pointer;
+
+  }
+  table tbody tr td {
+    background-color: #222B45 !important;
+    cursor: pointer;
+  }
+  table tbody tr:nth-child(even) td{
+    background-color: #192038 !important;
+  }
+  
+  table tbody tr:hover td{
+    background-color: #151a30 !important;
+  }
+
+  
